@@ -3,8 +3,9 @@
 	<head>
 	<title>Jub.Club</title>
 
-	<!-- meta info goes here-->
-			<meta charset="utf-8">
+
+
+	<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
 		<meta name="description" content="Get products that don't ship to your country">
@@ -18,8 +19,8 @@
     	<meta property="og:image" content="img/jubclub.jpg" />
 
 
-	<!--css goes here-->
-			<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		
 
 		<link rel="icon"  type="image/x-icon"  href="/favicon.ico">
@@ -29,11 +30,24 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
 
+
+		<!-- inline CSS goes here -->
+				<style>
+
+			#socialShare{
+
+				display:none;
+			}
+
+		</style>
+
 		
 	</head>
 	<body class="yo-anim-enabled">
 
-		<!--html goes here -->
+	
+
+
 
 		<section id="mini-navbar" class="main-navbar hidden-xs hidden-sm">
 			<div class="nav">
@@ -144,7 +158,7 @@
 										<h2>Get the products that don't ship to <span class="whichCountry" style="display:inline-block">your country</span></h2>
 									</header>
 									<div class="slide-text clearfix">
-										<p class="yo-anim yo-anim-fade" data-animation-delay="400">Apply today and get a <span class="forCountry" style="display:inline-block">U.S.</span> address to forward your packages. We get the items you buy online and ship them to you overnight.</p> 
+										<p class="yo-anim yo-anim-fade" data-animation-delay="400">Apply today and get a <span class="forCountry" style="display:inline-block">U.S.</span> address to forward your packages. We get the the items you buy online and ship them to you overnight.</p> 
 										<div class="app-buttons yo-anim yo-anim-fade" data-animation-delay="1200">
 										
 
@@ -229,14 +243,38 @@
 						<form name="newsletter-form" id="newsletter-form" action="javascript:addBeta()" method="POST" >
 							<div class="inputs">
 								<input type="text"  placeholder="e-mail" class="pull-right button-send btn-lg button-mail newsletter-form form-email-error"  name="newsletter[form-email]" id="form-email"/>
+								
 								<div class="button-submit">
 									<div class="" style="display: block; position: relative;">
 										<input type="submit" id="sendBut" value="Submit" class="btn btn-default pull-right button-send btn-lg"/>
+										<!-- fb connect button goes here.-->
+											<input type="button" id="sendBut1" value="Facebook" onClick="loginUser();" class="btn btn-default pull-right button-send btn-lg"/>
+
 										<div class="message-success alert-success alert hidden"><i class="fa fa-check"></i></div>
 									</div>
 								</div>
+
+							
 							</div>
+
+							 <!-- socialShare goes here -->
+							 <div id="socialShare">
+
+								<!--twitter button -->
+									<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://jub.club" data-text="Get products that don't ship to your country" data-count="none">Tweet</a>
+									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+									<!--facebook share button -->
+									<div class="fb-share-button" data-href="https://jubclub.com" data-type="button" style="margin-top:20px"></div>
+									
+									<!--end facebook share button-->
+
+								</div>
 						</form>
+						
+
+						
 					</div>
 				</div>
 			</div>
@@ -304,9 +342,13 @@
 		</section>
 
 		<div class="gallery-wrapper"></div>
+
 		
+		<div id="fb-root"></div>
+
 	</body>
-	<!--scripts go here-->
+	
+
 	<script src="js/jquery-2.1.0.min.js"></script>
 		<script src="js/modernizr-2.6.2.min.js"></script>
 		<script src="js/enquire.js"></script>
@@ -320,4 +362,8 @@
 		<script src="js/main.js"></script>
 		<script src="js/init.js"></script>
 
+		
+		
+		<script src="js/facebook/fb.js"></script>
+		<!-- Our FB JS Include Goes here-->
 </html>

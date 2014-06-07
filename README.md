@@ -1,4 +1,2 @@
-basics
+Social
 ======
-
-The basics of html, javascript with bootstrap
